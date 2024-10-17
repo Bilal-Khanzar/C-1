@@ -1,0 +1,78 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1. İki sayının farkını bulan kod
+        Console.WriteLine("1. İki sayının farkını bulan program:");
+        Console.Write("Birinci sayıyı girin: ");
+        int sayi1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("İkinci sayıyı girin: ");
+        int sayi2 = Convert.ToInt32(Console.ReadLine());
+        int fark = sayi1 - sayi2;
+        Console.WriteLine("İki sayının farkı: " + fark);
+        Console.WriteLine();
+
+        // 2. 5 sayısının karesini bulan kod
+        Console.WriteLine("2. 5 sayısının karesini bulan program:");
+        int kareSayi = 5;
+        int kare = kareSayi * kareSayi;
+        Console.WriteLine("5 sayısının karesi: " + kare);
+        Console.WriteLine();
+
+        // 3. 10 sayısının 3'e bölümünden kalanını bulan kod
+        Console.WriteLine("3. 10 sayısının 3'e bölümünden kalanını bulan program:");
+        int sayi3 = 10;
+        int kalan = sayi3 % 3;
+        Console.WriteLine("10 sayısının 3'e bölümünden kalan: " + kalan);
+        Console.WriteLine();
+
+        // 4. Klavyeden girilen 4 sayının toplamını ve çarpımını bulan kod
+        Console.WriteLine("4. Klavyeden girilen 4 sayının toplamını ve çarpımını bulan program:");
+        int toplam = 0;
+        int carpim = 1;
+
+        for (int i = 1; i <= 4; i++)
+        {
+            Console.Write($" {i}. sayıyı girin: ");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            toplam += sayi;
+            carpim *= sayi;
+        }
+
+        Console.WriteLine("Sayilarin toplami: " + toplam);
+        Console.WriteLine("Sayilarin carpimi: " + carpim);
+        Console.WriteLine();
+
+        // 5. Klavyeden girilen 2 sayının bölümünü bulan kod
+        Console.WriteLine("5. Klavyeden girilen 2 sayının bölümünü bulan program:");
+        Console.Write("Birinci sayıyı girin: ");
+        int sayi4 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("İkinci sayıyı girin: ");
+        int sayi5 = Convert.ToInt32(Console.ReadLine());
+
+        if (sayi5 != 0)
+        {
+            double bolum = (double)sayi4 / sayi5;
+            Console.WriteLine("İki sayının bölümü: " + bolum);
+        }
+        else
+        {
+            Console.WriteLine("Bölüm sıfıra bölünemez.");
+        }
+        Console.WriteLine();
+
+        // 6. Klavyeden kenarları girilen dikdörtgenler prizmasının hacmini hesaplayan kod
+        Console.WriteLine("6. Klavyeden kenarları girilen dikdörtgenler prizmasının hacmini hesaplayan program:");
+        Console.Write("Uzun kenarı girin: ");
+        double uzunKenar = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Kısa kenarı girin: ");
+        double kisaKenar = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Yüksekliği girin: ");
+        double yukseklik = Convert.ToDouble(Console.ReadLine());
+
+        double hacim = uzunKenar * kisaKenar * yukseklik;
+        Console.WriteLine("Dikdörtgenler prizmasının hacmi: " + hacim);
+    }
+}
